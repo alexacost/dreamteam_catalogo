@@ -1,4 +1,4 @@
-<?php include ("db.php")?>
+<?php include ('db.php')?>
 
 <!doctype html>
 <html lang="es">
@@ -18,7 +18,7 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">DreamTeam</a>
+        <a class="navbar-brand" href="index.php">DreamTeam</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -27,7 +27,7 @@
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Catalogo</a>
+              <a class="nav-link" href="index.php">Catalogo</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
@@ -37,9 +37,9 @@
                 </svg>
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="ingresa.html">Ingresa</a></li>
-                <li><a class="dropdown-item" href="registro.html">Registrate</a></li>
-                <li><a class="dropdown-item" href="mis_datos.html">Mis datos</a></li>
+                <li><a class="dropdown-item" href="ingresa.php">Ingresa</a></li>
+                <li><a class="dropdown-item" href="registro.php">Registrate</a></li>
+                <li><a class="dropdown-item" href="mis_datos.php">Mis datos</a></li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
@@ -53,6 +53,10 @@
   </header>
 
   <main>
+  
+  <?php if(!empty($message)): ?>
+      <p> <?= $message ?></p>
+    <?php endif; ?>
 
     <h1 class="mt-3 titulo">SHOP DE VIDEOJUEGOS</h1>
     <p>Filtro</p>
